@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"/>
+
+    <xs:element name="PMSData">
+        <xs:attribute name="lastUpdate" type="xs:dateTime" use="required"/>
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="room" type="roomType" minOccurs="0">
+                    <xs:attribute name="lastUpdate" type="xs:dateTime" use="required"/>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:complexType name="roomType">
+        <xs:sequence>
+            <xs:element name="roomID" type="xs:string" minOccurs="1" maxOccurs="1"/>
+            <xs:choice minOccurs="1" maxOccurs="1">
+                <xs:group ref="guestGroup"/>
+                <xs:element name="empty" type="emptyType"/>
+            </xs:choice>
+        </xs:sequence>
+    </xs:complexType>
+    
+    <xs:group name="guestGroup">
+        <xs:sequence>
+            <xs:element name="guest" type="guestType" maxOccurs="1"/>
+            <xs:element name="billing" type="billingType" minOccurs="0" maxOccurs="1"/>
+        </xs:sequence>
+    </xs:group>
+    
+    <xs:complexType name="guestType">
+        <xs:sequence>
+            <xs:element name="firstName" type="xs:string" maxOccurs="1"/>
+            <xs:element name="lastName" type="xs:string" maxOccurs="1"/>
+            <xs:element name="salutation" type="xs:string" maxOccurs="1"/>
+            <xs:element name="langcode" type="xs:string" maxOccurs="1"/> 
+            <xs:element name="checkIn" type="xs:dateTime" maxOccurs="1"/>
+            <xs:element name="scheduledCheckOut" type="xs:dateTime" maxOccurs="1"/>
+            <xs:element name="checkInStatus" type="xs:boolean" maxOccurs="1"/>
+        </xs:sequence>
+    </xs:complexType>
+    
+    <xs:complexType name="billingType">
+        <xs:sequence>
+            <xs:element name="item" type="itemType" minOccurs="0"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name= "messages">
+        <xs:sequence>
+            <xs:element name="message" type="messageType" minOccurs="0" />
+        </xs:sequence>
+    </xs:complexType>
+    
+    <xs:complexType name="messageType">
+        <xs:sequence>
+            <xs:element name="messageTitle" type="xs:string" minOccurs="1" maxOccurs="1"/>
+            <xs:element name="messageText" type="xs:string" minOccurs="1" maxOccurs="1"/>
+            <xs:element name="messageDate" type="xs:dateTime" minOccurs="1" maxOccurs="1"/>
+        </xs:sequence>
+    </xs:complexType>
+    
+    <xs:complexType name="itemType">
+        <xs:sequence>
+            <xs:element name="text" type="xs:string" minOccurs="1" maxOccurs="1"/>
+            <xs:element name="charge" type="xs:number" minOccurs="1" maxOccurs="1">
+                <xs:attribute name="currency" type="xs:string" use="required"/> 
+            </xs:element>
+            <xs:element name="date" type="xs:dateTime" minOccurs="1" maxOccurs="1"/>
+        </xs:sequence>
+    </xs:complexType>
+    
+    <xs:complexType name="emptyType">
+        <xs:complexContent>
+            <xs:restriction base="xsd:anyType"/>
+        </xs:complexContent>
+    </xs:complexType>
+</xs:schema>

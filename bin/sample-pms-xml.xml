@@ -1,0 +1,479 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<PMSData lastUpdate="2014-01-23T01:23:24-05:00">
+
+   <room lastUpdate="2014-01-22T01:50:44-05:00">
+      <roomID>R2015</roomID>
+      <empty/>
+   </room>
+
+   <room lastUpdate="2014-06-22T01:50:44-05:00">
+      <roomID>R2016</roomID>
+      <guest>
+         <firstName>Elisabeth</firstName>
+         <lastName>Jonson</lastName>
+         <salutation>Mrs.</salutation>
+         <langcode>nl_NL</langcode>
+         <checkIn>2014-06-27T00:00:00-05:00</checkIn>
+         <scheduledCheckOut>2014-06-29T00:00:00-05:00</scheduledCheckOut>
+         <checkInStatus>true</checkInStatus>
+      </guest>
+      <billing>
+         <item>
+            <text>Room service</text>
+            <charge currency="EUR">100.80</charge>
+            <date>2014-06-26T01:23:24-05:00</date>
+         </item>
+          <item>
+            <text>Laundry</text>
+            <charge currency="EUR">10.99</charge>
+            <date>2014-06-27T01:23:24-05:00</date>
+         </item>
+         <item>
+            <text>Minibar</text>
+            <charge currency="EUR">18.10</charge>
+            <date>2014-06-28T01:23:24-05:00</date>
+         </item>
+         <item>
+            <text>Minibar</text>
+            <charge currency="EUR">19.99</charge>
+            <date>2014-06-28T01:23:24-05:00</date>
+         </item>
+         <item>
+            <text>Minibar</text>
+            <charge currency="EUR">11.99</charge>
+            <date>2014-06-28T01:23:24-05:00</date>
+         </item>
+         <item>
+            <text>Minibar</text>
+            <charge currency="EUR">13.70</charge>
+            <date>2014-06-28T01:23:24-05:00</date>
+         </item>           
+         <item>
+            <text>Minibar</text>
+            <charge currency="EUR">19.90</charge>
+            <date>2014-06-28T01:23:24-05:00</date>
+         </item>
+         <item>
+            <text>Minibar</text>
+            <charge currency="EUR">14.70</charge>
+            <date>2014-06-28T01:23:24-05:00</date>
+         </item>
+         <item>
+            <text>Movie rental</text>
+            <charge currency="EUR">5.80</charge>
+            <date>2014-06-28T01:23:24-05:00</date>
+         </item>
+         <item>
+            <text>Movie rental</text>
+            <charge currency="EUR">5.90</charge>
+            <date>2014-06-28T01:23:24-05:00</date>
+         </item>
+          <item>
+            <text>Soju</text>
+            <charge currency="EUR">2.50</charge>
+            <date>2015-01-23T01:23:24-00:00</date>
+         </item>
+         <item>
+            <text>Chicken</text>
+            <charge currency="EUR">10.99</charge>
+            <date>2014-03-23T02:23:24-05:00</date>
+         </item>
+         <item>
+            <text>TAXI Hotel->Museum</text>
+            <charge currency="EUR">25.45</charge>
+            <date>2014-03-24T03:23:24+05:00</date>
+         </item>
+         <item>
+            <text>Movie rental_17</text>
+            <charge currency="EUR">5.80</charge>
+            <date>2014-10-30T09:50:24+09:00</date>
+         </item>         
+         <item>
+            <text>Movie rental_24</text>
+            <charge currency="EUR">5.99</charge>
+            <date>2014-10-30T23:24:24+05:00</date>
+         </item>         
+         <item>
+            <text>Room service</text>
+            <charge currency="EUR">10.20</charge>
+            <date>2014-03-24T11:23:24-05:00</date>
+         </item>
+          <item>
+            <text>Laundry1</text>
+            <charge currency="EUR">350.75</charge>
+            <date>2014-03-25T13:13:30-05:00</date>
+         </item>
+         <item>
+            <text>Minibar</text>
+            <charge currency="EUR">14.70</charge>
+            <date>2014-03-16T22:29:24-05:00</date>
+         </item>
+        <item>
+            <text>Movie rental</text>
+            <charge currency="EUR">50.45</charge>
+            <date>2014-06-24T15:23:24-05:00</date>
+         </item>
+        <item>
+            <text>Movie rental3</text>
+            <charge currency="EUR">45.10</charge>
+            <date>2014-07-27T01:25:24-05:00</date>
+         </item>
+        <item>
+            <text>Movie rental2</text>
+            <charge currency="EUR">75.89</charge>
+            <date>2014-05-24T01:23:24-05:00</date>
+         </item>
+          <item>
+            <text>Room Service2</text>
+            <charge currency="EUR">75.99</charge>
+            <date>2014-05-24T01:23:24-05:00</date>
+         </item>
+         <item>
+            <text>TAXI; Airport to Hotel</text>
+            <charge currency="EUR">75.30</charge>
+            <date>2014-12-21T03:23:24+05:00</date>
+         </item>
+         <item>
+            <text>Honey Butter Chips</text>
+            <charge currency="EUR">100.75</charge>
+            <date>2014-06-28T01:23:24-05:00</date>
+         </item>
+         <item>
+            <text>Moscato d'Asti</text>
+            <charge currency="EUR">380.90</charge>
+            <date>2014-12-21T01:23:24-00:00</date>
+         </item>
+         <item>
+            <text>Room Service - Bacon Carbonara</text>
+            <charge currency="EUR">290.25</charge>
+            <date>2014-06-26T01:23:24-05:00</date>
+         </item>
+         <item>
+            <text>Soju</text>
+            <charge currency="EUR">2.50</charge>
+            <date>2015-01-23T01:23:24-00:00</date>
+         </item>
+         <item>
+            <text>Chicken</text>
+            <charge currency="EUR">10.89</charge>
+            <date>2014-03-23T02:23:24-05:00</date>
+         </item>
+         <item>
+            <text>TAXI Hotel->Museum</text>
+            <charge currency="EUR">7.90</charge>
+            <date>2014-03-24T03:23:24+05:00</date>
+         </item>
+         <item>
+            <text>Movie rental_1</text>
+            <charge currency="EUR">4.99</charge>
+            <date>2014-10-30T09:50:24+09:00</date>
+         </item>         
+         <item>
+            <text>Movie rental_2</text>
+            <charge currency="EUR">5.99</charge>
+            <date>2014-10-30T23:24:24+05:00</date>
+         </item> 
+         <item>
+            <text>Room service</text>
+            <charge currency="EUR">100.00</charge>
+            <date>2014-06-26T01:23:24-05:00</date>
+         </item>
+          <item>
+            <text>Laundry</text>
+            <charge currency="EUR">10.35</charge>
+            <date>2014-06-27T01:23:24-05:00</date>
+         </item>
+         <item>
+            <text>Minibar</text>
+            <charge currency="EUR">34.99</charge>
+            <date>2014-06-28T01:23:24-05:00</date>
+         </item>
+         <item>
+            <text>Minibar</text>
+            <charge currency="EUR">12.05</charge>
+            <date>2014-06-28T01:23:24-05:00</date>
+         </item>
+         <item>
+            <text>Minibar</text>
+            <charge currency="EUR">16.70</charge>
+            <date>2014-06-28T01:23:24-05:00</date>
+         </item>
+         <item>
+            <text>Minibar</text>
+            <charge currency="EUR">13.10</charge>
+            <date>2014-06-28T01:23:24-05:00</date>
+         </item>           
+         <item>
+            <text>Minibar</text>
+            <charge currency="EUR">14.99</charge>
+            <date>2014-06-28T01:23:24-05:00</date>
+         </item>
+         <item>
+            <text>Minibar</text>
+            <charge currency="EUR">17.00</charge>
+            <date>2014-06-28T01:23:24-05:00</date>
+         </item>
+        <item>
+            <text>Movie rental</text>
+            <charge currency="EUR">5.10</charge>
+            <date>2014-06-28T01:23:24-05:00</date>
+         </item>
+         <item>
+            <text>Movie rental</text>
+            <charge currency="EUR">15.00</charge>
+            <date>2014-06-28T01:23:24-05:00</date>
+         </item>    
+      </billing>
+   </room>
+
+ <room lastUpdate="2014-01-23T01:23:24-05:00">
+      <roomID>R2017</roomID>
+      <guest>
+         <firstName>Jessica</firstName>
+         <lastName>Lake</lastName>
+         <salutation>Ms.</salutation>
+         <langcode>ru_RU</langcode>
+         <checkIn>2014-12-22T00:00:00-05:00</checkIn>
+         <scheduledCheckOut>2014-12-25T00:00:00-05:00</scheduledCheckOut>
+         <checkInStatus>true</checkInStatus>
+      </guest>
+      <billing>
+	    <item>
+            <text>TAXI; Airport to Hotel</text>
+            <charge currency="EUR">800</charge>
+            <date>2014-12-21T03:23:24+05:00</date>
+         </item>	
+	    <item>
+            <text>Honey Butter Chips</text>
+            <charge currency="EUR">100</charge>
+            <date>2014-12-21T01:23:24-00:00</date>
+         </item>
+         <item>
+            <text>Moscato d'Asti</text>
+            <charge currency="EUR">300.89</charge>
+            <date>2014-12-21T01:23:24-00:00</date>
+         </item>
+         <item>
+            <text>Movie</text>
+            <charge currency="EUR">9.99</charge>
+            <date>2014-12-21T02:23:24-05:00</date>
+         </item>
+         <item>
+            <text>Room Service - Bacon Carbonara</text>
+            <charge currency="EUR">20</charge>
+            <date>2014-12-22T23:24:24+05:00</date>
+         </item> 
+ 	    <item>
+            <text>Room Service - Jacob's Creek Sparkling Rose</text>          
+            <charge currency="EUR">52.10</charge>
+            <date>2014-12-22T23:24:24+05:00</date>
+         </item>  
+          <item>
+            <text>Room service</text>
+            <charge currency="EUR">100.00</charge>
+            <date>2014-06-26T01:23:24-05:00</date>
+         </item>
+          <item>
+            <text>Laundry</text>
+            <charge currency="EUR">10.00</charge>
+            <date>2014-06-27T01:23:24-05:00</date>
+         </item>
+         <item>
+            <text>Minibar</text>
+            <charge currency="EUR">14.00</charge>
+            <date>2014-06-28T01:23:24-05:00</date>
+         </item>
+         <item>
+            <text>Minibar</text>
+            <charge currency="EUR">11.00</charge>
+            <date>2014-06-28T01:23:24-05:00</date>
+         </item>
+         <item>
+            <text>Minibar</text>
+            <charge currency="EUR">19.00</charge>
+            <date>2014-06-28T01:23:24-05:00</date>
+         </item>
+         <item>
+            <text>Minibar</text>
+            <charge currency="EUR">15.00</charge>
+            <date>2014-06-28T01:23:24-05:00</date>
+         </item>           
+         <item>
+            <text>Minibar</text>
+            <charge currency="EUR">18.00</charge>
+            <date>2014-06-28T01:23:24-05:00</date>
+         </item>
+         <item>
+            <text>Minibar</text>
+            <charge currency="EUR">14.00</charge>
+            <date>2014-06-28T01:23:24-05:00</date>
+         </item>
+         <item>
+            <text>Movie rental</text>
+            <charge currency="EUR">5.00</charge>
+            <date>2014-06-28T01:23:24-05:00</date>
+         </item>
+         <item>
+            <text>Movie rental</text>
+            <charge currency="EUR">5.00</charge>
+            <date>2014-06-28T01:23:24-05:00</date>
+         </item>
+          <item>
+            <text>Soju</text>
+            <charge currency="EUR">2.50</charge>
+            <date>2015-01-23T01:23:24-00:00</date>
+         </item>
+         <item>
+            <text>Chicken</text>
+            <charge currency="EUR">10.05</charge>
+            <date>2014-03-23T02:23:24-05:00</date>
+         </item>
+         <item>
+            <text>TAXI Hotel->Museum</text>
+            <charge currency="EUR">5.00</charge>
+            <date>2014-03-24T03:23:24+05:00</date>
+         </item>
+         <item>
+            <text>Movie rental_17</text>
+            <charge currency="EUR">15.00</charge>
+            <date>2014-10-30T09:50:24+09:00</date>
+         </item>         
+         <item>
+            <text>Movie rental_24</text>
+            <charge currency="EUR">51.00</charge>
+            <date>2014-10-30T23:24:24+05:00</date>
+         </item>         
+         <item>
+            <text>Room service</text>
+            <charge currency="EUR">10.20</charge>
+            <date>2014-03-24T11:23:24-05:00</date>
+         </item>
+          <item>
+            <text>Laundry1</text>
+            <charge currency="EUR">350.75</charge>
+            <date>2014-03-25T13:13:30-05:00</date>
+         </item>
+         <item>
+            <text>Minibar</text>
+            <charge currency="EUR">14.70</charge>
+            <date>2014-03-16T22:29:24-05:00</date>
+         </item>
+         <item>
+            <text>Movie rental</text>
+            <charge currency="EUR">50.45</charge>
+            <date>2014-06-24T15:23:24-05:00</date>
+         </item>
+         <item>
+            <text>Movie rental3</text>
+            <charge currency="EUR">45.00</charge>
+            <date>2014-07-27T01:25:24-05:00</date>
+         </item>
+         <item>
+            <text>Movie rental2</text>
+            <charge currency="EUR">75.00</charge>
+            <date>2014-05-24T01:23:24-05:00</date>
+         </item>
+          <item>
+            <text>Room Service2</text>
+            <charge currency="EUR">75.00</charge>
+            <date>2014-05-24T01:23:24-05:00</date>
+         </item>
+         <item>
+            <text>TAXI; Airport to Hotel</text>
+            <charge currency="EUR">75.30</charge>
+            <date>2014-12-21T03:23:24+05:00</date>
+         </item>
+         <item>
+            <text>Honey Butter Chips</text>
+            <charge currency="EUR">100.75</charge>
+            <date>2014-06-28T01:23:24-05:00</date>
+         </item>
+         <item>
+            <text>Moscato d'Asti</text>
+            <charge currency="EUR">38.90</charge>
+            <date>2014-12-21T01:23:24-00:00</date>
+         </item>
+         <item>
+            <text>Room Service - Bacon Carbonara</text>
+            <charge currency="EUR">290.25</charge>
+            <date>2014-06-26T01:23:24-05:00</date>
+         </item>
+         <item>
+            <text>Soju</text>
+            <charge currency="EUR">2.50</charge>
+            <date>2015-01-23T01:23:24-00:00</date>
+         </item>
+         <item>
+            <text>Chicken</text>
+            <charge currency="EUR">10.99</charge>
+            <date>2014-03-23T02:23:24-05:00</date>
+         </item>
+         <item>
+            <text>TAXI Hotel->Museum</text>
+            <charge currency="EUR">25.00</charge>
+            <date>2014-03-24T03:23:24+05:00</date>
+         </item>
+         <item>
+            <text>Movie rental_1</text>
+            <charge currency="EUR">5.99</charge>
+            <date>2014-10-30T09:50:24+09:00</date>
+         </item>         
+         <item>
+            <text>Movie rental_2</text>
+            <charge currency="EUR">15.89</charge>
+            <date>2014-10-30T23:24:24+05:00</date>
+         </item> 
+         <item>
+            <text>Room service</text>
+            <charge currency="EUR">100.25</charge>
+            <date>2014-06-26T01:23:24-05:00</date>
+         </item>
+          <item>
+            <text>Laundry</text>
+            <charge currency="EUR">10.10</charge>
+            <date>2014-06-27T01:23:24-05:00</date>
+         </item>
+         <item>
+            <text>Minibar</text>
+            <charge currency="EUR">19.00</charge>
+            <date>2014-06-28T01:23:24-05:00</date>
+         </item>
+         <item>
+            <text>Minibar</text>
+            <charge currency="EUR">16.00</charge>
+            <date>2014-06-28T01:23:24-05:00</date>
+         </item>
+         <item>
+            <text>Minibar</text>
+            <charge currency="EUR">14.20</charge>
+            <date>2014-06-28T01:23:24-05:00</date>
+         </item>
+         <item>
+            <text>Minibar</text>
+            <charge currency="EUR">24.00</charge>
+            <date>2014-06-28T01:23:24-05:00</date>
+         </item>           
+         <item>
+            <text>Minibar</text>
+            <charge currency="EUR">18.10</charge>
+            <date>2014-06-28T01:23:24-05:00</date>
+         </item>
+         <item>
+            <text>Minibar</text>
+            <charge currency="EUR">34.99</charge>
+            <date>2014-06-28T01:23:24-05:00</date>
+         </item>
+         <item>
+            <text>Movie rental</text>
+            <charge currency="EUR">5.25</charge>
+            <date>2014-06-28T01:23:24-05:00</date>
+         </item>
+         <item>
+            <text>Movie rental</text>
+            <charge currency="EUR">5.60</charge>
+            <date>2014-06-28T01:23:24-05:00</date>
+         </item>          
+      </billing>
+   </room>
+
+</PMSData>
