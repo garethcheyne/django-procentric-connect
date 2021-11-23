@@ -1,3 +1,4 @@
+import json
 from datetime import datetime
 from procentric_connect.modules.pms.Allotz import connector
 
@@ -13,7 +14,7 @@ class Helper(object):
 
     @staticmethod
     def fix_short_date(date):
-        """Allots API can returna short date ie 2018-05-05, this will covert to the
+        """Allots API can return a short date ie 2018-05-05, this will covert to the
         LG Pro:Centric accepted date for mate of 2018-05-05T00:00:00+12:00
         """
         return date + 'T00:00:00+12:00'
@@ -21,106 +22,124 @@ class Helper(object):
 
 class Mapper(object):
 
-    @staticmethod
-    def get_rooms():
-        allotz = connector.Allotz(property_id=2404,
-                        key_1='a21b5217577bc770cda9df2173e8a954',
-                        key_2='c34d39bd3133a0e1af4bb7266bf04223')
-
-        #allotz = Allotz(property_id=968, key_1='e375f729ecf58e9f882e1c32014049f8', key_2='5c7dc96ee3fe1334b495fc665e6e085d')
-        #query = ("?checkin_data_gte=%s" % datetime.now().strftime("%Y-%m-%d"))
-        query = '?'
-        rooms = allotz.get_bookings(query=query)
-        return Mapper.map_rooms(rooms)
 
     @staticmethod
-    def map_rooms(rooms):
+    def get_details():
+        
+        allotz = connector.Allotz()
+
+        payload = {
+            "status": "success",
+            "data":{
+                "id": allotz.property_id,
+                "name": allotz.property_name,
+                "currency":"NZD",
+                "website": "https://www.hiddenlakehotel.co.nz",
+                "timezone":"NZT",
+                "timestamp": datetime.now().isoformat(),
+                "status": "up",
+                "suscriptionId": 1
+            }
+        }
+        return payload
+
+    @staticmethod
+    def get_room(room_no):
+        allotz = connector.Allotz()
+        query = ("?checkout_data_gte=%s&checkin_date_lte=%s" % (datetime.now().strftime("%Y-%m-%d"), datetime.now().strftime("%Y-%m-%d")))
+        bookings = allotz.get_bookings(query)
+        room = Mapper.map_room(bookings, room_no)
+        return room
+
+    @staticmethod
+    def get_folios(room_id, guest_id):
+        allotz = connector.Allotz()
+        query = ("?checkout_data_gte=%s&checkin_date_lte=%s" % (datetime.now().strftime("%Y-%m-%d"), datetime.now().strftime("%Y-%m-%d")))
+        bookings = allotz.get_bookings(query)
+        folios = Mapper.map_folios(bookings, room_id, guest_id)
+        return folios
+
+
+    @staticmethod
+    def map_folios(bookings, room_id, guest_id):
+        """ Map single rooms folio charges fro Pro:CEntric v2 API"""
+        print(room_id)
         try:
-            data = {}
-            for items in rooms['bookings']:
+            balance = 0.00
+            payload = {}
 
-                for room in items['rooms']:
 
-                    if room['occupation_status'] == 'checked_in':
-                        room['occupation_status'] = 'true'
-                    else:
-                        room['occupation_status'] = 'false'
+            for booking in bookings['bookings']:
+                for room in booking['rooms']:
+                    if room['room_number'] == str(room_id):
+                        if room['occupation_status'] == 'checked_in':
+                            pass
+                        else:
+                            continue                    
+                        
+                        if 'extras' in booking:
+                            payload['items'] = []
 
-                    # temp_token is added as dic will not allow repetitive keys, this is remove before
-                    # it is sent on to Pro:Centric via the XML parser.
+                            for extra in booking['extras']:
+                                payload['items'].append({
+                                    'id': extra['id'],
+                                    'created': Helper.fix_short_date(extra['sell_date']),
+                                    'description': str(extra['count']) +'x - ' + extra['title'],
+                                    'amount': float(extra['total']),
+                                    'display': True
+                                })
 
-                    data['room lastUpdate="' + Helper.fix_long_date(items['updated_at']) + '" temp_token=' + room['room_number']] = {
-                        'roomID': room['room_number'],
-                        'guest': {
-                            "firstName": "null",
-                            "lastName": room['guest_name'],
-                            "salutation": "null",
-                            "langcode": "en_GB",
-                            "checkIn": Helper.fix_short_date(room['checkin_date']),
-                            "scheduledCheckOut": Helper.fix_short_date(room['checkout_date']),
-                            "checkInStatus": room['occupation_status'],
-                        },
+                                balance += float(extra['total'])
 
-                    }
-            return data
+                        payload['id'] = room['id']
+                        payload['status'] = 'open'
+                        payload['balance'] = balance
+
+            return payload
 
         except KeyError:
             exit()
 
-    @staticmethod
-    def get_room(room_no):
-        print(room_no)
-        allotz = Allotz(property_id=2404,
-                        key_1='a21b5217577bc770cda9df2173e8a954',
-                        key_2='c34d39bd3133a0e1af4bb7266bf04223')
 
-        #allotz = Allotz(property_id=968, key_1='e375f729ecf58e9f882e1c32014049f8', key_2='5c7dc96ee3fe1334b495fc665e6e085d')
-        #query = ("?checkin_data_gte=%s" % datetime.now().strftime("%Y-%m-%d"))
-        query = '?'
-        rooms = allotz.get_bookings(query=query)
-        return Mapper.map_room(rooms, room_no)
 
     @staticmethod
-    def map_room(rooms, room_no):
+    def map_room(bookings, room_no):
         """ Map single room for Pro:Centric v2 API"""
         try:
-            data = {}
-            for items in rooms['bookings']:
-                for room in items['rooms']:
+            payload = {
+                'status': 'success',
+                'data': {}
+                }
+
+            for booking in bookings['bookings']:
+                for room in booking['rooms']:
                     if room['room_number'] == str(room_no):
-
                         if room['occupation_status'] == 'checked_in':
-                            room['occupation_status'] = True
+                            pass
                         else:
-                            room['occupation_status'] = False
-
-                        data['status'] = 'success'
-                        data['data'] = {
-                            'id': room['room_id'],
-                            'guest': {
+                            continue
+                        
+                        payload['data'] = {
+                            'id': str(room['id']),
+                            'guests':[{ 
                                 'name': {
-                                    'prefix': 'null',
-                                    'first': 'null',
-                                    'middle': 'null',
-                                    'last': 'null',
-                                    'suffix': 'null',
                                     'full': room['guest_name']
                                 },
-                                'balance': 'null',
-                                'language': 'null',
-                                'no_post': 'null',
-                                'vip_status': 'null',
-                                'id': '101-2',
-                                'option': 'null',
-                                'channel_preference': 'null',
-                            }
+                                'balance': booking['due'],
+                                'language': None,
+                                'no_post': None,
+                                'vip_status': None,
+                                'id':str(room['guest']['id']),
+                                'option': None,
+                                'channel_preference': None,
+                                }
+                            ]
                         }
-                        Log.objects.create(level="N", output="MAPPING :: SUCCESS")
+                        #Log.objects.create(level="N", output="MAPPING :: SUCCESS")
                     else:
-                        data['status'] = 'success'
-                        data['data'] = {}
-                        Log.objects.create(level="E", output="MAPPING :: FAILED")
-            return data
+                        continue
+                        #Log.objects.create(level="E", output="MAPPING :: FAILED")
+            return payload
 
         except KeyError:
             exit()

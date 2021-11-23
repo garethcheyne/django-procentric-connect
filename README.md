@@ -1,1 +1,0 @@
-"# django-procentric-connect" 
